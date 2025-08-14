@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vertical Lunch Break Centered</title>
+  <style>
+    tr:nth-child(even) {
+      background-color: burlywood;
+    }
+    tr:nth-child(odd) {
+      background-color: aqua;
+    }
+    table, th, td {
+      padding: 12px;
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    .vertical-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      color: blueviolet;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <table style="width: 100%;">
+    <tr>
+      <th>Day/Hour</th>
+      <th>9:15-10:15</th>
+      <th>10:15-11:15</th>
+      <th>11:15-12:15</th>
+      <th>12:15-1:15</th>
+      <th>1:15-2:15</th>
+      <th rowspan="2">Break</th>
+      <th class="vertical-text" rowspan="6">LUNCH</th>
+      <th>2:15-3:15</th>
+      <th>3:15-4:15</th>
+      <th>4:15-5:00</th>
+    </tr>
+    <tr style="display: none;"></tr> <!-- Spacer row for rowspan alignment -->
+    <tr>
+      <th>Monday</th>
+      <td></td>
+      <td>sak</td>
+      <td>thk</td>
+      <td>lib</td>
+      <td>aak</td>
+      <td>arb</td>
+      <td>ps</td>
+    </tr>
+    <tr>
+      <th>Tuesday</th>
+      <td></td>
+      <td>unk</td>
+      <td>arb</td>
+      <td>sak</td>
+      <td>thk</td>
+      <td>sf</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Wednesday</th>
+      <td>unk</td>
+      <td>sf</td>
+      <td>aak</td>
+      <td>thk</td>
+      <td>arb</td>

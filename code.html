@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+  <style>
+    body {
+      background: #f9e7e7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Push content to top and bottom */
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .pig {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background: pink;
+      border-radius: 50%;
+      box-shadow: inset 0 -10px 0 rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+
+    .ear {
+      width: 60px;
+      height: 60px;
+      background: pink;
+      position: absolute;
+      top: -20px;
+      border-radius: 50%;
+      transform: rotate(45deg);
+    }
+
+    .ear.left {
+      left: -20px;
+    }
+
+    .ear.right {
+      right: -20px;
+    }
+
+    .eye {
+      width: 20px;
+      height: 20px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 60px;
+    }
+
+    .eye.left {
+      left: 50px;
+    }
+
+    .eye.right {
+      right: 50px;
+    }
+
+    .snout {
+      width: 80px;
+      height: 60px;
+      background: #ffb6c1;
+      border-radius: 40px / 30px;
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: inset 0 5px 0 rgba(0,0,0,0.05);
+    }
+
+    .nostril {
+      width: 12px;
+      height: 20px;
+      background: #d36e70;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+    }
+
+    .nostril.left {
+      left: 20px;
+    }
+
+    .nostril.right {
+      right: 20px;
+    }
+
+    .bottom-section {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ff69b4;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff1493;
+    }
+
+    #message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #d1005d;
+    }
+  </style>
+</head>
+<body>
+  <div class="pig">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="snout">
+      <div class="nostril left"></div>
+      <div class="nostril right"></div>
+    </div>
+  </div>
+
+  <!-- Bottom section -->
+  <div class="bottom-section">
+    <h1>Okasari nannu click cheyavachu ga</h1>
+    <button onclick="displayHello()">Click Me</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function displayHello() {
+      document.getElementById("message").innerHTML = "nuv pandivi andhukey nannu click chesavu 🐖🐷";
+    }
+  </script>
+</body>
+</html>
