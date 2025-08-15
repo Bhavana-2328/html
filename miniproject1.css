@@ -1,0 +1,182 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #001;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.ocean {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, #001f3f, #0074D9);
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  padding: 20px;
+  text-shadow: 0 0 10px #00f5ff;
+}
+
+/* Seaweed */
+.seaweed {
+  position: absolute;
+  bottom: 100px;
+  width: 20px;
+  height: 120px;
+  background: green;
+  border-radius: 10px;
+  animation: sway 3s ease-in-out infinite alternate;
+}
+
+.seaweed1 {
+  left: 15%;
+}
+
+.seaweed2 {
+  left: 75%;
+  animation-delay: 1s;
+}
+
+@keyframes sway {
+  0% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+/* Sand */
+.sand {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: #c2b280;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+/* Fish */
+.fish {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  border-radius: 50% 50% 50% 50%;
+  background: coral;
+  animation: swim 12s linear infinite;
+}
+
+.fish::before {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid inherit;
+}
+
+.fish1 {
+  background-color: orange;
+  top: 30%;
+  animation-delay: 0s;
+}
+
+.fish2 {
+  background-color: #00ffff;
+  top: 50%;
+  animation-delay: 3s;
+}
+
+.fish3 {
+  background-color: #ff69b4;
+  top: 70%;
+  animation-delay: 6s;
+}
+
+@keyframes swim {
+  0% { left: -60px; transform: scaleX(1); }
+  49% { transform: scaleX(1); }
+  50% { transform: scaleX(-1); }
+  100% { left: 110%; transform: scaleX(-1); }
+}
+
+/* Jellyfish */
+.jellyfish {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.tentacle {
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  bottom: -30px;
+  border-radius: 20px;
+  animation: tentacleMove 1.5s infinite alternate;
+}
+
+.tentacle:nth-child(1) { left: 5px; }
+.tentacle:nth-child(2) { left: 17px; }
+.tentacle:nth-child(3) { left: 29px; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes tentacleMove {
+  0% { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
+
+/* Bubbles */
+.bubbles .bubble {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: rise 7s infinite ease-in;
+}
+
+.bubble1 {
+  left: 20%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 0s;
+}
+
+.bubble2 {
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+}
+
+.bubble3 {
+  left: 80%;
+  width: 8px;
+  height: 8px;
+  animation-delay: 4s;
+}
+
+@keyframes rise {
+  0% { bottom: 0; opacity: 0.3; transform: translateX(0); }
+  100% { bottom: 100%; opacity: 0; transform: translateX(-20px); }
+}

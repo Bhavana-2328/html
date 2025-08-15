@@ -1,0 +1,1 @@
+document.writeln("hello world this is a external javascript")
